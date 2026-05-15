@@ -7,4 +7,4 @@
 
 "Learning by doing! This repo is all about my experiments, practice codes, and beginner-level projects."
 
-"Hello World! This is my starting point on GitHub, where I upload my practice codes and beginner projects."
+
