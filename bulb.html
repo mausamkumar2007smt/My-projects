@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+</head>
+<body>
+    <div class="container">
+        
+        <img id="bulbImg" src="unglow.png" alt="Bulb">
+        <br>
+        <button id="changeBtn">Glow</button>
+    </div>
+    
+    <style>
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #bulbImg {
+            width: 200px;
+            height: 50;
+            margin-bottom: 20px;
+        }
+
+        #changeBtn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+
+<script>
+    const changeBtn = document.getElementById('changeBtn');
+    const bulbImg = document.getElementById('bulbImg');
+
+    let isGlowing = false;
+
+    changeBtn.addEventListener('click', () => {
+        if (!isGlowing) {
+            // Jab bulb off ho,tab tap karne par glowing bulb ki image 
+            bulbImg.src = "glow.png"; 
+            changeBtn.textContent = "Turn Off";
+            isGlowing = true;
+        } else {
+            //  tap karne par wapas simple bulb ki image 
+            bulbImg.src = "unglow.png"; 
+            changeBtn.textContent = "Glow";
+            isGlowing = false;
+        }
+    });
+</script>
+</body>
+</html>
